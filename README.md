@@ -1,1 +1,1 @@
-# FTOAPI for WordPress
+# FTDapi for WordPress
