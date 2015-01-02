@@ -112,10 +112,14 @@ if (!class_exists('FtdApiForWordPress')) :
 			endif;
 		}
 
-		public function makeApiCall($params = array(), $cache = true) {
+		public function makeApiCall($params = array(), $cache = true, $debug = false) {
 			$mergedParams = array_merge($this -> defautApiParams, $params);
 
 			$query = http_build_query($mergedParams);
+
+			if ($debug == true) :
+				return $query;
+			endif;
 
 			$cacheFileName = WP_CONTENT_DIR . $this -> cacheLocation . md5($query) . '.json';
 
@@ -139,7 +143,7 @@ if (!class_exists('FtdApiForWordPress')) :
 				else :
 					throw new Exception(__('FTDapi - API is currently unavailable', 'ftdapiwordpress'));
 				endif;
-				
+
 				// Process the Data
 				if ($cache && get_option('ftdapi_cacheable') == 1) :
 					@file_put_contents($cacheFileName, json_encode($responseData));
@@ -153,13 +157,74 @@ if (!class_exists('FtdApiForWordPress')) :
 		}
 
 		public function frontendInit() {
+			add_action('wp_enqueue_scripts', array(&$this, 'registerAssets'));
+
 			add_shortcode('ftd-api', array(&$this, 'shortCodeAction'));
 		}
 
-		public function shortCodeAction() {
-			//return WP_CONTENT_DIR . '/ftdapi-wordpress-cache/';
+		public function shortCodeAction($atts) {
+			$atts = shortcode_atts(array('time_interval' => get_option('ftdapi_time_interval'), 'selection' => get_option('ftdapi_selection'), 'foodtruck_id' => get_option('ftdapi_foodtruck_id'), 'show_map' => get_option('ftdapi_show_map'), 'map_height' => get_option('ftdapi_map_height'), ), $atts, 'ftd-api');
 
-			return '' . print_r($this -> makeApiCall(array('tk' => '509ac615cd1bbbe88f043c4a8bd7eaa3')), true);
+			switch($atts['selection']) :
+				case 'region' :
+					$request = $this -> makeApiCall(array('tk' => get_option('ftdapi_token'), 'tp' => 'operatortour', 'dt' => $atts['time_interval']), true, false);
+
+					if (isset($request['error']) || count($request) == 0)
+						return __('FTDapi - Currently no dates available', 'ftdapiwordpress');
+
+					include ($this -> getTemplateFile('region'));
+					break;
+				case 'provider' :
+					$request = $this -> makeApiCall(array('tk' => get_option('ftdapi_token'), 'tp' => 'operatortour', 'dt' => $atts['time_interval']), true, false);
+
+					if (isset($request['error']) || count($request) == 0)
+						return __('FTDapi - Currently no dates available', 'ftdapiwordpress');
+
+					include ($this -> getTemplateFile('provider'));
+					break;
+				case 'truck' :
+					$request = $this -> makeApiCall(array('tk' => get_option('ftdapi_token'), 'tp' => 'operatortour', 'dt' => $atts['time_interval']), true, false);
+
+					$request = $this -> filterTrucks($request, $atts['foodtruck_id']);
+
+					if (isset($request['error']) || count($request) == 0)
+						return __('FTDapi - Currently no dates available', 'ftdapiwordpress');
+
+					include ($this -> getTemplateFile('truck'));
+					break;
+				default :
+					return __('FTDapi - No display type selected', 'ftdapiwordpress');
+			endswitch;
+		}
+
+		public function getTemplateFile($filename) {
+			if (file_exists(get_template_directory() . '/ftdapi/' . $filename . '.php')) :
+				return get_template_directory() . '/ftdapi/' . $filename . '.php';
+			else :
+				return sprintf("%s/templates/" . $filename . ".php", dirname(__FILE__));
+			endif;
+		}
+
+		public function registerAssets() {
+			wp_register_style('ftdapi-base', plugins_url('assets/css/ftdapi.css', __FILE__));
+
+			wp_register_style('ftdapi-leaflet', 'http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css');
+			wp_register_style('ftdapi-leaflet-markercluster', 'http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css');
+			wp_register_style('ftdapi-leaflet-markercluster-default', 'http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css');
+
+			wp_register_script('ftdapi-leaflet', 'http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js', array(), '1.0.0', true);
+			wp_register_script('ftdapi-leaflet-markercluster', 'http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js', array(), '1.0.0', true);
+			wp_register_script('ftdapi-map', plugins_url('assets/js/ftdapi-map.js', __FILE__), array(), '1.1.0', true);
+		}
+
+		public function filterTrucks($data, $truckId) {
+			foreach ($data as $key => $value) :
+				if (trim($value['truck']) != $truckId) :
+					unset($data[$key]);
+				endif;
+			endforeach;
+
+			return array_values($data);
 		}
 
 	}

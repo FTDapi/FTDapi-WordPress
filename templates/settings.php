@@ -76,7 +76,7 @@
             <tr valign="top">
                 <th scope="row"><label for="ftdapi_token"><?php echo __('Map height', 'ftdapiwordpress'); ?></label></th>
                 <td>
-                	<input class="regular-text" type="text" name="ftdapi_map_height" id="ftdapi_map_height" value="<?php echo get_option('ftdapi_map_height'); ?>" />
+                	<input class="regular-text" type="text" name="ftdapi_map_height" id="ftdapi_map_height" value="<?php echo get_option('ftdapi_map_height', '350'); ?>" />
                 	<p class="description"><?php echo __('Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam', 'ftdapiwordpress'); ?></p>
                 </td>
             </tr>
