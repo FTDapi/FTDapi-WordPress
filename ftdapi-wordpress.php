@@ -163,11 +163,18 @@ if (!class_exists('FtdApiForWordPress')) :
 		}
 
 		public function shortCodeAction($atts) {
-			$atts = shortcode_atts(array('time_interval' => get_option('ftdapi_time_interval'), 'selection' => get_option('ftdapi_selection'), 'foodtruck_id' => get_option('ftdapi_foodtruck_id'), 'show_map' => get_option('ftdapi_show_map'), 'map_height' => get_option('ftdapi_map_height'), ), $atts, 'ftd-api');
+			$atts = shortcode_atts(array(
+				'token' => get_option('ftdapi_token'), 
+				'time_interval' => get_option('ftdapi_time_interval'), 
+				'selection' => get_option('ftdapi_selection'), 
+				'foodtruck_id' => get_option('ftdapi_foodtruck_id'), 
+				'show_map' => get_option('ftdapi_show_map'), 
+				'map_height' => get_option('ftdapi_map_height')
+			 ), $atts, 'ftd-api');
 
 			switch($atts['selection']) :
 				case 'region' :
-					$request = $this -> makeApiCall(array('tk' => get_option('ftdapi_token'), 'tp' => 'operatortour', 'dt' => $atts['time_interval']), true, false);
+					$request = $this -> makeApiCall(array('tk' => $atts['token'], 'tp' => 'operatortour', 'dt' => $atts['time_interval']), true, false);
 
 					if (isset($request['error']) || count($request) == 0)
 						return __('FTDapi - Currently no dates available', 'ftdapiwordpress');
@@ -175,7 +182,7 @@ if (!class_exists('FtdApiForWordPress')) :
 					include ($this -> getTemplateFile('region'));
 					break;
 				case 'provider' :
-					$request = $this -> makeApiCall(array('tk' => get_option('ftdapi_token'), 'tp' => 'operatortour', 'dt' => $atts['time_interval']), true, false);
+					$request = $this -> makeApiCall(array('tk' => $atts['token'], 'tp' => 'operatortour', 'dt' => $atts['time_interval']), true, false);
 
 					if (isset($request['error']) || count($request) == 0)
 						return __('FTDapi - Currently no dates available', 'ftdapiwordpress');
@@ -183,7 +190,7 @@ if (!class_exists('FtdApiForWordPress')) :
 					include ($this -> getTemplateFile('provider'));
 					break;
 				case 'truck' :
-					$request = $this -> makeApiCall(array('tk' => get_option('ftdapi_token'), 'tp' => 'operatortour', 'dt' => $atts['time_interval']), true, false);
+					$request = $this -> makeApiCall(array('tk' => $atts['token'], 'tp' => 'operatortour', 'dt' => $atts['time_interval']), true, false);
 
 					$request = $this -> filterTrucks($request, $atts['foodtruck_id']);
 

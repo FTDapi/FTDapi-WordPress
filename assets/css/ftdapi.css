@@ -11,6 +11,17 @@
 #ftd-summary .approved {padding-right:10px;}
 #ftd-summary .approved img {vertical-align:middle; width:49px; height: 60px;}
 .ftd-items {border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin:10px 0px 10px 0px; padding:10px 0px 0px 10px;}
+.ftd-items img,
+#ftd-summary img,
+.ftd-headline img {box-shadow:none; -moz-box-shadow: none; -webkit-box-shadow: none;  }
 .ftd-item {margin-bottom: 20px;}
+.ftd-item:after {
+    content:'';
+    display:block;
+    clear: both;
+}
+.ftd-item .provider-logo {float: left;}
+.ftd-item .nundso {float: right;}
+
 .ftd-cowork{text-align: right; font-weight: bold;}
 .provider-logo {vertical-align:middle;width:60px;padding-right: 5px;}

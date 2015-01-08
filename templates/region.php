@@ -10,6 +10,12 @@ wp_enqueue_style('ftdapi-base');
 	<div class="ftd-items">
 		 <?php foreach ($request as $item) : ?>
 		 <div class="ftd-item media">
+		 <img class="provider-logo" src="<?php echo 'http://www.food-trucks-deutschland.de/' . $item['image'];?>" alt="<?php echo $item['name'];?>"/>
+           <?php if ($item['nundso']) : ?>
+                <a href="<?php echo $item['nundso'];?>" target="_blank" title="Nürnberg und so - Food Test <?php echo $item['name'];?>"><img class="nundso" src="http://food-trucks-deutschland.de/assets/images/foodtrucks/logo-nuernberg-und-so-food-test.png" width="90" height="50"></a>
+            <?php endif; ?>
+		 
+		 
 		 <div class="media-body">
 		 <p>
 		 <?php if ($atts['time_interval'] == 'today') : ?>
@@ -20,6 +26,7 @@ wp_enqueue_style('ftdapi-base');
 		 </p>
 		 <p><?php echo date(__('l', 'ftdapiwordpress'), $item['startTime']); ?> <?php echo date(__('d.m.Y', 'ftdapiwordpress'), $item['startTime']); ?> - <?php echo $item['address']['full']; ?></p>
 		 </div>
+		  
 		 </div>
 		 <?php endforeach; ?>
 	</div>

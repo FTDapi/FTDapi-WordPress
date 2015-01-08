@@ -6,7 +6,7 @@
 wp_enqueue_style('ftdapi-base');
 ?>
 <div class="ftd-container">
-	<h3 class="ftd-headline"><img class="headline-logo" src="<?php echo 'http://www.food-trucks-deutschland.de/' . $request[0]['image']; ?>" alt="<?php echo $request[0]['name']; ?>" > <?php echo $request[0]['name'] ?> - <?php echo __('Current tour dates', 'ftdapiwordpress'); ?></h3>
+	<h3 class="ftd-headline"><img class="headline-logo" src="<?php echo 'http://www.food-trucks-deutschland.de/' . $request[0]['image']; ?>" alt="<?php echo $request[0]['name']; ?>" > <?php echo $request[0]['name'] ?> <?php echo $request[0]['truck']; ?> - <?php echo __('Current tour dates', 'ftdapiwordpress'); ?></h3>
 	<div id="ftd-summary">
 		<ul>
             <?php if ($request[0]['ftd'] == "true") : ?>
