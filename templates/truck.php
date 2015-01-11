@@ -32,7 +32,7 @@ wp_enqueue_style('ftdapi-base');
 		 <?php echo $item['truck']; ?> / <strong><?php echo date(__('H:i', 'ftdapiwordpress'), $item['startTime']); ?> <?php echo __('to', 'ftdapiwordpress'); ?> <?php echo date(__('H:i', 'ftdapiwordpress'), $item['endTime']); ?>
 		 <a href="http://maps.google.com/maps?q=<?php echo $item['map']['latitude']; ?>,<?php echo $item['map']['longitude']; ?>" target="_blank"><?php echo $item['locationname']; ?> (<?php echo $item['sponsorname']; ?>)</a></strong>
 		 </p>
-		 <p><?php echo date(__('l', 'ftdapiwordpress'), $item['startTime']); ?> <?php echo date(__('d.m.Y', 'ftdapiwordpress'), $item['startTime']); ?> - <?php echo $item['address']['full']; ?></p>
+		 <p><?php echo strftime(__('%A', 'ftdapiwordpress'), $item['startTime']); ?> <?php echo date(__('d.m.Y', 'ftdapiwordpress'), $item['startTime']); ?> - <?php echo $item['address']['full']; ?></p>
 		 </div>
 		 </div>
 		 <?php endforeach; ?>

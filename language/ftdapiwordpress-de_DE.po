@@ -1,0 +1,230 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FTDapi for WordPress\n"
+"POT-Creation-Date: 2015-01-11 13:25+0100\n"
+"PO-Revision-Date: 2015-01-11 14:36+0100\n"
+"Last-Translator: \n"
+"Language-Team: FTDapi <tw@tweis.de>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../ftdapi-wordpress.php:75
+msgid ""
+"WARNING: Your filesystem is not writable. Requests to FTDapi can not be "
+"cached!"
+msgstr ""
+"WARNUNG: Das Dateisystem hat keine Schreibrechte. Anfragen zur FTDapi können "
+"nicht zwischengespeichert werden!"
+
+#: ../ftdapi-wordpress.php:94
+msgid "FTDapi Settings"
+msgstr "FTDapi Einstellungen"
+
+#: ../ftdapi-wordpress.php:94 ../templates/settings.php:2
+msgid "FTDapi for WordPress"
+msgstr "FTDapi für WordPress"
+
+#: ../ftdapi-wordpress.php:99
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Sie haben nicht die nötigen Rechte um diese Seite anzusehen."
+
+#: ../ftdapi-wordpress.php:111
+msgid "No valid API-Token set."
+msgstr "Es wurde kein valider API-Token gesetzt."
+
+#: ../ftdapi-wordpress.php:145
+msgid "FTDapi - No vaild request"
+msgstr "FTDapi - Keine gültige Anfrage"
+
+#: ../ftdapi-wordpress.php:148
+msgid "FTDapi - API is currently unavailable"
+msgstr "FTDapi - Die API steht zur Zeit nicht zur Verfügung"
+
+#: ../ftdapi-wordpress.php:180 ../ftdapi-wordpress.php:192
+#: ../ftdapi-wordpress.php:206
+msgid "FTDapi - Currently no dates available"
+msgstr "FTDapi - Es sind keine neuen Termine verfügbar"
+
+#: ../ftdapi-wordpress.php:215
+msgid "FTDapi - No display type selected"
+msgstr "FTDapi - Es wurde kein Layout ausgewählt"
+
+#: ../ftdapi-wordpress.php:277
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: ../templates/map.php:24
+msgid "on"
+msgstr "am"
+
+#: ../templates/map.php:24
+msgid "from"
+msgstr "von"
+
+#: ../templates/map.php:24 ../templates/provider.php:32
+#: ../templates/region.php:24 ../templates/truck.php:32
+msgid "to"
+msgstr "bis"
+
+#: ../templates/provider.php:9 ../templates/region.php:9
+#: ../templates/truck.php:9
+msgid "Current tour dates"
+msgstr "Aktuelle Tourdaten"
+
+#: ../templates/provider.php:30 ../templates/region.php:22
+#: ../templates/settings.php:39 ../templates/truck.php:30
+msgid "Today"
+msgstr "Heute"
+
+#: ../templates/provider.php:32 ../templates/region.php:24
+#: ../templates/truck.php:32
+msgid "H:i"
+msgstr "H:i"
+
+#: ../templates/provider.php:35 ../templates/region.php:27
+#: ../templates/truck.php:35
+msgid "l"
+msgstr "l"
+
+#: ../templates/provider.php:35 ../templates/region.php:27
+#: ../templates/truck.php:35
+msgid "d.m.Y"
+msgstr "d.m.Y"
+
+#: ../templates/provider.php:46 ../templates/region.php:39
+#: ../templates/truck.php:46
+msgid "In cooperation with"
+msgstr "In Zusammenarbeit mit"
+
+#: ../templates/settings.php:7
+msgid "General"
+msgstr "Allgemein"
+
+#: ../templates/settings.php:9
+msgid ""
+"The general settings are important to retrieve data from FTD and to display "
+"them on your website."
+msgstr ""
+"Die allgemeinen Einstellungen sind Voraussetzung zum Bezug von Daten von FTD "
+"zur Darstellung auf der Webseite."
+
+#: ../templates/settings.php:13
+msgid "API Token"
+msgstr "API Token"
+
+#: ../templates/settings.php:16
+msgid "<b>Required.</b> Token must be requested at Foodtrucks Deutschland."
+msgstr ""
+"<b>Erforderlich.</b> Ein Token kann bei Foodtrucks Deutschland beantragt "
+"werden."
+
+#: ../templates/settings.php:21
+msgid "Cache Duration"
+msgstr "Cache Dauer"
+
+#: ../templates/settings.php:24
+msgid "Duration in minutes. 120 minutes are recommended."
+msgstr "Dauer in Minuten. 120 Minuten werden empfohlen."
+
+#: ../templates/settings.php:30
+msgid "Default"
+msgstr "Standard"
+
+#: ../templates/settings.php:32
+msgid ""
+"The default settings should be defined here, they can be overridden for each "
+"shortcode individually."
+msgstr ""
+"Die Standard Einstellungen sollten hier definiert werden, sie können in "
+"jedem Shortcode individuell überschrieben werden."
+
+#: ../templates/settings.php:36
+msgid "Time Interval"
+msgstr "Zeitspanne"
+
+#: ../templates/settings.php:40
+msgid "Tomorrow"
+msgstr "Morgen"
+
+#: ../templates/settings.php:41
+msgid "2 Days"
+msgstr "2 Tage"
+
+#: ../templates/settings.php:42
+msgid "1 Week"
+msgstr "1 Woche"
+
+#: ../templates/settings.php:44
+msgid "Time interval of the displayed tour dates."
+msgstr "Zeitspanne der angezeigten Tourdaten."
+
+#: ../templates/settings.php:49
+msgid "Selection"
+msgstr "Layout"
+
+#: ../templates/settings.php:52
+msgid "Region"
+msgstr "Region"
+
+#: ../templates/settings.php:53
+msgid "Provider"
+msgstr "Anbieter"
+
+#: ../templates/settings.php:54
+msgid "Truck"
+msgstr "Truck"
+
+#: ../templates/settings.php:56
+msgid "Selection of tour dates presentation type."
+msgstr "Auswahl der Tourdaten-Darstellung."
+
+#: ../templates/settings.php:61
+msgid "Foodtruck ID"
+msgstr "Foodtruck ID"
+
+#: ../templates/settings.php:64
+msgid "ID provided by FTD for filtering the truck view."
+msgstr "Die ID definiert von FTD zur eindeutigen Filterung der Trucks."
+
+#: ../templates/settings.php:69
+msgid "Map"
+msgstr "Karte"
+
+#: ../templates/settings.php:71
+msgid "Show Map"
+msgstr "Karte anzeigen"
+
+#: ../templates/settings.php:72
+msgid "Tick to display map below tour dates."
+msgstr "Darstellung einer Karte unterhalb der Tourdaten."
+
+#: ../templates/settings.php:77
+msgid "Map Data Provider"
+msgstr "Karten-Dienstleister"
+
+#: ../templates/settings.php:80
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: ../templates/settings.php:81
+msgid "Google Maps"
+msgstr "Google Maps"
+
+#: ../templates/settings.php:83
+msgid "Selection of the map provider for the map."
+msgstr "Auswahl des Karten-Dienstleister für die Karte."
+
+#: ../templates/settings.php:88
+msgid "Map Height"
+msgstr "Höhe der Karte"
+
+#: ../templates/settings.php:91
+msgid "Height of map in pixels. Min. 350 pixels are recommended."
+msgstr "Höhe der Karte in Pixel. Min. 350 Pixel werden empfohlen."
