@@ -1,21 +1,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FTDapi for WordPress\n"
-"POT-Creation-Date: 2015-01-11 13:25+0100\n"
-"PO-Revision-Date: 2015-01-11 14:36+0100\n"
+"POT-Creation-Date: 2015-02-22 14:49+0100\n"
+"PO-Revision-Date: 2015-02-22 14:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: FTDapi <tw@tweis.de>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../ftdapi-wordpress.php:75
+#: ../ftdapi-wordpress.php:79
 msgid ""
 "WARNING: Your filesystem is not writable. Requests to FTDapi can not be "
 "cached!"
@@ -23,52 +23,52 @@ msgstr ""
 "WARNUNG: Das Dateisystem hat keine Schreibrechte. Anfragen zur FTDapi können "
 "nicht zwischengespeichert werden!"
 
-#: ../ftdapi-wordpress.php:94
+#: ../ftdapi-wordpress.php:98
 msgid "FTDapi Settings"
 msgstr "FTDapi Einstellungen"
 
-#: ../ftdapi-wordpress.php:94 ../templates/settings.php:2
+#: ../ftdapi-wordpress.php:98 ../templates/settings.php:3
 msgid "FTDapi for WordPress"
 msgstr "FTDapi für WordPress"
 
-#: ../ftdapi-wordpress.php:99
+#: ../ftdapi-wordpress.php:103
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Sie haben nicht die nötigen Rechte um diese Seite anzusehen."
 
-#: ../ftdapi-wordpress.php:111
+#: ../ftdapi-wordpress.php:115
 msgid "No valid API-Token set."
 msgstr "Es wurde kein valider API-Token gesetzt."
 
-#: ../ftdapi-wordpress.php:145
+#: ../ftdapi-wordpress.php:149
 msgid "FTDapi - No vaild request"
 msgstr "FTDapi - Keine gültige Anfrage"
 
-#: ../ftdapi-wordpress.php:148
+#: ../ftdapi-wordpress.php:152
 msgid "FTDapi - API is currently unavailable"
 msgstr "FTDapi - Die API steht zur Zeit nicht zur Verfügung"
 
-#: ../ftdapi-wordpress.php:180 ../ftdapi-wordpress.php:192
-#: ../ftdapi-wordpress.php:206
+#: ../ftdapi-wordpress.php:186 ../ftdapi-wordpress.php:198
+#: ../ftdapi-wordpress.php:212
 msgid "FTDapi - Currently no dates available"
 msgstr "FTDapi - Es sind keine neuen Termine verfügbar"
 
-#: ../ftdapi-wordpress.php:215
+#: ../ftdapi-wordpress.php:221
 msgid "FTDapi - No display type selected"
 msgstr "FTDapi - Es wurde kein Layout ausgewählt"
 
-#: ../ftdapi-wordpress.php:277
+#: ../ftdapi-wordpress.php:283
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: ../templates/map.php:24
+#: ../templates/map.php:26
 msgid "on"
 msgstr "am"
 
-#: ../templates/map.php:24
+#: ../templates/map.php:26
 msgid "from"
 msgstr "von"
 
-#: ../templates/map.php:24 ../templates/provider.php:32
+#: ../templates/map.php:26 ../templates/provider.php:32
 #: ../templates/region.php:24 ../templates/truck.php:32
 msgid "to"
 msgstr "bis"
@@ -79,7 +79,7 @@ msgid "Current tour dates"
 msgstr "Aktuelle Tourdaten"
 
 #: ../templates/provider.php:30 ../templates/region.php:22
-#: ../templates/settings.php:39 ../templates/truck.php:30
+#: ../templates/settings.php:40 ../templates/truck.php:30
 msgid "Today"
 msgstr "Heute"
 
@@ -90,8 +90,8 @@ msgstr "H:i"
 
 #: ../templates/provider.php:35 ../templates/region.php:27
 #: ../templates/truck.php:35
-msgid "l"
-msgstr "l"
+msgid "%A"
+msgstr "%A"
 
 #: ../templates/provider.php:35 ../templates/region.php:27
 #: ../templates/truck.php:35
@@ -103,11 +103,11 @@ msgstr "d.m.Y"
 msgid "In cooperation with"
 msgstr "In Zusammenarbeit mit"
 
-#: ../templates/settings.php:7
+#: ../templates/settings.php:8
 msgid "General"
 msgstr "Allgemein"
 
-#: ../templates/settings.php:9
+#: ../templates/settings.php:10
 msgid ""
 "The general settings are important to retrieve data from FTD and to display "
 "them on your website."
@@ -115,29 +115,31 @@ msgstr ""
 "Die allgemeinen Einstellungen sind Voraussetzung zum Bezug von Daten von FTD "
 "zur Darstellung auf der Webseite."
 
-#: ../templates/settings.php:13
+#: ../templates/settings.php:14
 msgid "API Token"
 msgstr "API Token"
 
-#: ../templates/settings.php:16
-msgid "<b>Required.</b> Token must be requested at Foodtrucks Deutschland."
+#: ../templates/settings.php:17
+msgid ""
+"<b>Required.</b> Token must be requested at <a title=\"\" href=\"mailto:"
+"token@ftdapi.de\">token@ftdapi.de</a>."
 msgstr ""
-"<b>Erforderlich.</b> Ein Token kann bei Foodtrucks Deutschland beantragt "
-"werden."
+"<b>Erforderlich.</b> Ein Token kann über <a title=\"\" href=\"mailto:"
+"token@ftdapi.de\">token@ftdapi.de</a> beantragt werden."
 
-#: ../templates/settings.php:21
+#: ../templates/settings.php:22
 msgid "Cache Duration"
 msgstr "Cache Dauer"
 
-#: ../templates/settings.php:24
+#: ../templates/settings.php:25
 msgid "Duration in minutes. 120 minutes are recommended."
 msgstr "Dauer in Minuten. 120 Minuten werden empfohlen."
 
-#: ../templates/settings.php:30
+#: ../templates/settings.php:31
 msgid "Default"
 msgstr "Standard"
 
-#: ../templates/settings.php:32
+#: ../templates/settings.php:33
 msgid ""
 "The default settings should be defined here, they can be overridden for each "
 "shortcode individually."
@@ -145,86 +147,94 @@ msgstr ""
 "Die Standard Einstellungen sollten hier definiert werden, sie können in "
 "jedem Shortcode individuell überschrieben werden."
 
-#: ../templates/settings.php:36
+#: ../templates/settings.php:37
 msgid "Time Interval"
 msgstr "Zeitspanne"
 
-#: ../templates/settings.php:40
+#: ../templates/settings.php:41
 msgid "Tomorrow"
 msgstr "Morgen"
 
-#: ../templates/settings.php:41
+#: ../templates/settings.php:42
 msgid "2 Days"
 msgstr "2 Tage"
 
-#: ../templates/settings.php:42
+#: ../templates/settings.php:43
 msgid "1 Week"
 msgstr "1 Woche"
 
-#: ../templates/settings.php:44
+#: ../templates/settings.php:45
 msgid "Time interval of the displayed tour dates."
 msgstr "Zeitspanne der angezeigten Tourdaten."
 
-#: ../templates/settings.php:49
+#: ../templates/settings.php:50
 msgid "Selection"
 msgstr "Layout"
 
-#: ../templates/settings.php:52
+#: ../templates/settings.php:53
 msgid "Region"
 msgstr "Region"
 
-#: ../templates/settings.php:53
+#: ../templates/settings.php:54
 msgid "Provider"
 msgstr "Anbieter"
 
-#: ../templates/settings.php:54
+#: ../templates/settings.php:55
 msgid "Truck"
 msgstr "Truck"
 
-#: ../templates/settings.php:56
+#: ../templates/settings.php:57
 msgid "Selection of tour dates presentation type."
 msgstr "Auswahl der Tourdaten-Darstellung."
 
-#: ../templates/settings.php:61
+#: ../templates/settings.php:62
 msgid "Foodtruck ID"
 msgstr "Foodtruck ID"
 
-#: ../templates/settings.php:64
+#: ../templates/settings.php:65
 msgid "ID provided by FTD for filtering the truck view."
 msgstr "Die ID definiert von FTD zur eindeutigen Filterung der Trucks."
 
-#: ../templates/settings.php:69
+#: ../templates/settings.php:70
 msgid "Map"
 msgstr "Karte"
 
-#: ../templates/settings.php:71
+#: ../templates/settings.php:72
 msgid "Show Map"
 msgstr "Karte anzeigen"
 
-#: ../templates/settings.php:72
+#: ../templates/settings.php:73
 msgid "Tick to display map below tour dates."
 msgstr "Darstellung einer Karte unterhalb der Tourdaten."
 
-#: ../templates/settings.php:77
+#: ../templates/settings.php:78
 msgid "Map Data Provider"
 msgstr "Karten-Dienstleister"
 
-#: ../templates/settings.php:80
+#: ../templates/settings.php:81
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
-#: ../templates/settings.php:81
+#: ../templates/settings.php:82
 msgid "Google Maps"
 msgstr "Google Maps"
 
-#: ../templates/settings.php:83
+#: ../templates/settings.php:84
 msgid "Selection of the map provider for the map."
 msgstr "Auswahl des Karten-Dienstleister für die Karte."
 
-#: ../templates/settings.php:88
+#: ../templates/settings.php:89
 msgid "Map Height"
 msgstr "Höhe der Karte"
 
-#: ../templates/settings.php:91
+#: ../templates/settings.php:92
 msgid "Height of map in pixels. Min. 350 pixels are recommended."
 msgstr "Höhe der Karte in Pixel. Min. 350 Pixel werden empfohlen."
+
+#~ msgid "l"
+#~ msgstr "l"
+
+#~ msgid "<b>Required.</b> Token must be requested at Foodtrucks Deutschland."
+#~ msgstr ""
+#~ "<b>Erforderlich.</b> Ein Token kann bei Foodtrucks Deutschland beantragt "
+#~ "werden."

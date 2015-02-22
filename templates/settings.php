@@ -1,5 +1,6 @@
 <div class="wrap">
-    <h2><?php echo __('FTDapi for WordPress', 'ftdapiwordpress'); ?></h2>
+    <h2 style="height: 50px; display: block; line-height: 50px;"><img style="float: left; margin-right: 25px" height="50" src="<?php echo plugins_url('../assets/img/FTDapi-Logo.png', __FILE__); ?>" />
+    	<?php echo __('FTDapi for WordPress', 'ftdapiwordpress'); ?></h2>
     <form method="post" action="options.php"> 
         <?php @settings_fields('ftdapi_for_wordpress-group'); ?>
         <?php @do_settings_fields('ftdapi_for_wordpress-group'); ?>
@@ -13,7 +14,7 @@
                 <th scope="row"><label for="ftdapi_token"><?php echo __('API Token', 'ftdapiwordpress'); ?></label></th>
                 <td>
                 	<input class="regular-text" type="text" name="ftdapi_token" id="ftdapi_token" value="<?php echo get_option('ftdapi_token'); ?>" />
-                	<p class="description"><?php echo __('<b>Required.</b> Token must be requested at Foodtrucks Deutschland.', 'ftdapiwordpress'); ?></p>
+                	<p class="description"><?php echo __('<b>Required.</b> Token must be requested at <a title="" href="mailto:token@ftdapi.de">token@ftdapi.de</a>.', 'ftdapiwordpress'); ?></p>
                 </td>
             </tr>
             <?php if(get_option('ftdapi_cacheable') == 1): ?>
