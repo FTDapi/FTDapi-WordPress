@@ -3,7 +3,7 @@
  Plugin Name: FTDapi for WordPress
  Plugin URI: http://ftdapi.de/
  Description: Implementation of the FTDapi for WordPress
- Version: 0.1
+ Version: 0.9.0
  Author: Tim Weisenberger
  Text Domain: ftdapiwordpress
  Author URI: http://www.tec-promotion.de/
