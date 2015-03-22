@@ -10,11 +10,11 @@ To integrate the FTDapi in your pages/posts or widgets you just have to use the 
 ###All available parameters
 - token: yourtoken
 - cache: integer
-- time_interval: 
+- time_interval: today, tomorrow, twodays, week
 - selection: region, provider, truck
 - foodtruck_id: yourftid
 - show_map: 1 or 0
-- map_dataprovider: 
+- map_dataprovider: openstreetmap, google
 - map_height: integer
 
 ###Let's play with paramaters
@@ -40,5 +40,8 @@ To integrate the FTDapi in your pages/posts or widgets you just have to use the 
 
 
 > Food Trucks Germany (FTD) is a project by Klaus P. Wünsch together with Markus Wolf.
-The project FTDapi of the tec-promotion GmbH has no legal connection to FTD. Based on the available API provided by FTD all connected Food Trucks can be displayed with the FTDapi plugins for Joomla !, WordPress, TYPO3 CMS and not based on PHP based websites. Find more informations and WordPress demo site here [wordpress.ftdapi.de](http://wordpress.ftdapi.de)
-Get your token 
+The project FTDapi of the tec-promotion GmbH has no legal connection to FTD. Based on the available API provided by FTD all connected Food Trucks can be displayed with the FTDapi plugins for Joomla !, WordPress, TYPO3 CMS and not based on PHP based websites.
+
+Find more informations and a WordPress demo site here [wordpress.ftdapi.de](http://wordpress.ftdapi.de)
+
+Get your token by mail token@ftdapi.de
